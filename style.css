@@ -1,0 +1,66 @@
+:root {
+  --num-row: 1;
+  --num-col: 1;
+}
+
+body {
+  background-color: #ededed;
+  font-size: 1.6rem;
+  text-align: center;
+  font-family: 'New Tegomin', serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px; 
+}
+
+.size-input {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
+#size-label {
+  font-size: 14px;
+  margin-top: auto;
+  font-weight: bold;
+}
+
+#btn-change  {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 50rem;
+  background-color: transparent;
+  font-weight: 700;
+  margin-left: 40px;
+}
+
+#btn-change:focus {
+  outline: none;
+}
+
+.container {
+  max-width: 500px;
+  min-height: 500px;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(var(--num-col), 1fr);
+  grid-template-rows: repeat(var(--num-row), 1fr);
+  /* flex-direction: column; */
+}
+
+
+.item {
+  border: 1px solid black;
+}
+
+.mouseover {
+  background-color: black;
+}
+
+@media (max-width: 500px) {
+  .container {
+    max-width: 300px;
+    min-height: 300px;
+  }
+}
